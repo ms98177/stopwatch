@@ -79,52 +79,29 @@ function stopwatchReset (event) {
   console.log("   reset! (lapList.innerHTML) = " + lapList.innerHTML)
   console.log("   reset! (lapList) = " + lapList.children)
   // clear intervalId
-  let intervalId = null
-  
+
   // clear rawTime
-  var rawTime = 0
-  var raw = 0
-  formatTime (raw)
-
-  //
-
+  rawTime = 0
 
   lapList.innerHTML = formatTime(rawTime)
-   //laps.push(lapList)
-
 
   // clears the lapList
   console.log("   reset! (lapList.innerHTML) = " + lapList.innerHTML)
   lapList.innerHTML = ""
   console.log("   reset! (lapList.innerHTML) = " + lapList.innerHTML)
-  //
 
   // clears the stopwatchTime
-  clearInterval(intervalId)
   stopwatchTime.innerHTML = ""
   stopwatchTime.innerHTML = formatTime(rawTime)
   console.log("   reset! (rawTime) = " + rawTime)
-  console.log("   reset! (raw) = " + raw)
+  //console.log("   reset! (raw) = " + raw)
 
 
-  // clear the interval
-  //intervalId = setInterval(stopwatchUpdate, intervalRate)
+
+
   console.log("   reset! (intervalId) = " + intervalId)
   console.log("   reset! (intervalRate) = " + intervalRate)
 
-
-  // document.getElementById("stopwatchTime").innerHTML = "";
-  // console.log("reset! (stopwatchTime) = " + stopwatchTime)
-
-  // stopwatchTime.innerHTML = formatTime(rawTime)
-  // console.log("reset! (stopwatchTime) = " + stopwatchTime)
-
-  // laps.push(rawTime)
-  // lapList.innerHTML = formatTime(rawTime)
-
-  // console.log("reset! (stopwatchTime) = " + stopwatchTime)
-
-  //document.getElementById("laps").innerHTML = ""
 }
 
 
