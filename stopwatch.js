@@ -76,17 +76,19 @@ function stopwatchReset (event) {
 
 // reset values
   console.log('Reset')
-console.log("   reset! (lapList.innerHTML) = " + lapList.innerHTML)
-console.log("   reset! (lapList) = " + lapList.children)
+  console.log("   reset! (lapList.innerHTML) = " + lapList.innerHTML)
+  console.log("   reset! (lapList) = " + lapList.children)
   // clear intervalId
   let intervalId = null
-
+  
   // clear rawTime
   var rawTime = 0
-  console.log("   reset! (rawTime) = " + rawTime)
+  var raw = 0
+  formatTime (raw)
 
   //
-  console.log("   reset! (laps before) = " + laps)
+
+
   lapList.innerHTML = formatTime(rawTime)
    //laps.push(lapList)
 
@@ -98,8 +100,12 @@ console.log("   reset! (lapList) = " + lapList.children)
   //
 
   // clears the stopwatchTime
+  clearInterval(intervalId)
   stopwatchTime.innerHTML = ""
   stopwatchTime.innerHTML = formatTime(rawTime)
+  console.log("   reset! (rawTime) = " + rawTime)
+  console.log("   reset! (raw) = " + raw)
+
 
   // clear the interval
   //intervalId = setInterval(stopwatchUpdate, intervalRate)
